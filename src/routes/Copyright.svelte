@@ -18,7 +18,7 @@
 	footer {
 		text-align: center;
 		font-family: 'Raleway';
-		font-size: 1rem;
+		font-size: 0.75rem;
 	}
 
 	a {
