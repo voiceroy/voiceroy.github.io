@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { toggleTheme } from '$lib/changeTheme';
+	import moon from '$lib/assets/images/dark/moon.svg';
+	import sun from '$lib/assets/images/light/sun.svg';
 
 	type NavItem = {
 		name: string;
@@ -14,6 +16,8 @@
 	<ul>
 		<li><span>{brand_name}</span></li>
 		<input name="theme" type="checkbox" role="switch" checked on:change={toggleTheme} />
+		<img alt="themeIndicator" src={moon} class="darktheme" />
+		<img alt="themeIndicator" src={sun} class="lighttheme" />
 	</ul>
 	<ul>
 		{#each nav_links as item}
@@ -38,5 +42,24 @@
 
 	input {
 		margin-left: 10px;
+	}
+
+	img {
+		max-width: 16px;
+		max-height: 16px;
+		margin: 5px;
+	}
+
+	nav .darktheme,
+	nav .lighttheme {
+		display: none;
+	}
+
+	[data-theme='dark'] nav .darktheme {
+		display: inline;
+	}
+
+	[data-theme='light'] nav .lighttheme {
+		display: inline;
 	}
 </style>

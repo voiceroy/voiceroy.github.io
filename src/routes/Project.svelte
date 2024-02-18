@@ -23,6 +23,6 @@
 	}
 
 	img {
-		border-radius: 0.25%;
+		border-radius: var(--pico-border-radius);
 	}
 </style>
