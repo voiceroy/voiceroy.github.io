@@ -1,5 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+
+	import sun from '$lib/assets/images/light/sun.svg';
+	import moon from '$lib/assets/images/dark/moon.svg';
 
 	let currentTheme: string;
 	const STORAGE_KEY = 'theme';
@@ -41,10 +46,26 @@
 	});
 </script>
 
-<input
-	name="theme"
-	type="checkbox"
-	role="switch"
-	checked={currentTheme !== THEMES.DARK}
-	on:change={toggleTheme}
+<div id="toggle">
+	<input
+		name="theme"
+		type="checkbox"
+		role="switch"
+		checked={currentTheme !== THEMES.DARK}
+		on:change={toggleTheme}
+	/>
+</div>
+
+<img
+	alt="themeIndicator"
+	src={currentTheme !== THEMES.DARK ? sun : moon}
+	class={currentTheme !== THEMES.DARK ? 'lighttheme' : 'darktheme'}
 />
+
+<style>
+	img {
+		max-width: 16px;
+		max-height: 16px;
+		margin: 5px;
+	}
+</style>

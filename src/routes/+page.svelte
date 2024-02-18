@@ -24,7 +24,9 @@
 </svelte:head>
 
 <header>
-	<NavBar {brand_name} {nav_links} />
+	<section>
+		<NavBar {brand_name} {nav_links} />
+	</section>
 	<Header />
 </header>
 <main>
