@@ -1,9 +1,0 @@
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css");
-@import url("https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.3/css/pico.blue.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-}

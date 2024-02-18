@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../styles.css';
+	import '../styles.scss';
 
 	import NavBar from './NavBar.svelte';
 	import Header from './Header.svelte';
@@ -23,8 +23,15 @@
 	<title>Harishankar G</title>
 </svelte:head>
 
-<NavBar {brand_name} {nav_links} />
-<Header />
-<Projects />
-<ContactMe />
-<Copyright copyright_holder="Harishankar G" />
+<header>
+	<NavBar {brand_name} {nav_links} />
+	<Header />
+</header>
+<main>
+	<Projects />
+</main>
+
+<footer>
+	<ContactMe />
+	<Copyright copyright_holder="Harishankar G" />
+</footer>
