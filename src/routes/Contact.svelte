@@ -16,9 +16,9 @@
 
 <style>
 	img {
-		max-width: 64px;
-		max-height: 64px;
-		margin: 5px;
+		max-width: 3rem;
+		max-height: 3rem;
+		margin: 0.25rem;
 	}
 
 	.contact .darktheme,

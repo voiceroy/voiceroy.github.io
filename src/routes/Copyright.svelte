@@ -17,10 +17,8 @@
 <style>
 	footer {
 		text-align: center;
-	}
-
-	p {
 		font-family: 'Raleway';
+		font-size: 1rem;
 	}
 
 	a {

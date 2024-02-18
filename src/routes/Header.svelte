@@ -11,6 +11,7 @@
 <style>
 	#aboutme {
 		font-family: 'Montserrat';
+		font-size: 1.5rem;
 	}
 
 	#name {

@@ -20,6 +20,11 @@
 
 	.project-name {
 		text-decoration: none;
+		font-size: 1rem;
+	}
+
+	.project-description {
+		font-size: 0.9rem;
 	}
 
 	img {
