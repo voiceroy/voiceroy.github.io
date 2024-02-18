@@ -6,9 +6,11 @@
 </script>
 
 <div class="project">
-	<a class="project-name" href={project_link}>{project_name}</a>
-	<p class="project-description">{project_description}</p>
-	<img src={project_icon} alt={project_name} />
+	<article>
+		<a class="project-name" href={project_link}>{project_name}</a>
+		<p class="project-description">{project_description}</p>
+		<img src={project_icon} alt={project_name} />
+	</article>
 </div>
 
 <style>
@@ -18,5 +20,9 @@
 
 	.project-name {
 		text-decoration: none;
+	}
+
+	img {
+		border-radius: 0.25%;
 	}
 </style>
