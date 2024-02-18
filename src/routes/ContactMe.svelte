@@ -1,16 +1,25 @@
 <script>
 	import Contact from './Contact.svelte';
 
-	import linkedin from '$lib/assets/images/linkedin.svg';
-	import github from '$lib/assets/images/github.svg';
+	import linkedinDark from '$lib/assets/images/dark/linkedin.svg';
+	import githubDark from '$lib/assets/images/dark/github.svg';
+
+	import linkedinLight from '$lib/assets/images/light/linkedin.svg';
+	import githubLight from '$lib/assets/images/light/github.svg';
 </script>
 
 <div id="contactme">
-	<Contact contact_name="Github" contact_url="https://github.com/voiceroy" contact_icon={github} />
+	<Contact
+		contact_name="Github"
+		contact_url="https://github.com/voiceroy"
+		contact_icon_dark={githubDark}
+		contact_icon_light={githubLight}
+	/>
 	<Contact
 		contact_name="LinkedIn"
 		contact_url="https://www.linkedin.com/in/harishankargaddanakeri/"
-		contact_icon={linkedin}
+		contact_icon_dark={linkedinDark}
+		contact_icon_light={linkedinLight}
 	/>
 </div>
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { toggleTheme } from '$lib/changeTheme';
+
 	type NavItem = {
 		name: string;
 		link: string;
@@ -6,15 +8,6 @@
 
 	export let brand_name: string;
 	export let nav_links: NavItem[];
-	let darkMode: boolean = true;
-
-	export function toggleTheme() {
-		darkMode = !darkMode;
-		let containerTag = document.getElementById('main')!;
-		containerTag.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-		containerTag.style.backgroundColor = 'var(--pico-background-color);';
-		containerTag.style.color = 'var(--pico-color);';
-	}
 </script>
 
 <nav>
@@ -31,7 +24,7 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid white;
+		border-bottom: 1px solid;
 		margin-bottom: 5px;
 	}
 
