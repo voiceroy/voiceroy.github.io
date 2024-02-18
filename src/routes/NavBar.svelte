@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { toggleTheme } from '$lib/changeTheme';
-	import moon from '$lib/assets/images/dark/moon.svg';
+	import ThemeToggle from './ThemeToggle.svelte';
 	import sun from '$lib/assets/images/light/sun.svg';
+	import moon from '$lib/assets/images/dark/moon.svg';
 
 	type NavItem = {
 		name: string;
@@ -15,7 +15,7 @@
 <nav>
 	<ul>
 		<li><span>{brand_name}</span></li>
-		<input name="theme" type="checkbox" role="switch" checked on:change={toggleTheme} />
+		<ThemeToggle />
 		<img alt="themeIndicator" src={moon} class="darktheme" />
 		<img alt="themeIndicator" src={sun} class="lighttheme" />
 	</ul>
@@ -38,10 +38,6 @@
 
 	li {
 		font-family: 'Raleway';
-	}
-
-	input {
-		margin-left: 10px;
 	}
 
 	img {
