@@ -32,6 +32,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@picocss/pico": "^2.0.3"
+    "@picocss/pico": "^2.0.3",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10"
   }
 }
