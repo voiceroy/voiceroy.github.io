@@ -15,7 +15,7 @@
 	let brand_name: string = 'Harishankar G';
 	let nav_links: NavItem[] = [
 		{ name: 'About Me', link: '#aboutme' },
-		{ name: 'Contact', link: '#contact' }
+		{ name: 'Contact', link: '#contactme' }
 	];
 </script>
 
