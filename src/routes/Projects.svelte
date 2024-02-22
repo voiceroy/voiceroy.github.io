@@ -1,7 +1,7 @@
 <script>
 	import Project from './Project.svelte';
 
-	import wordleClone from '$lib/assets/images/projects/wordle-clone.png';
+	import wordleClone from '$lib/assets/images/projects/wordle-clone.webp';
 </script>
 
 <p>Some of my projects:</p>
