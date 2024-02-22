@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
-	import { cubicOut } from 'svelte/easing';
 
 	import sun from '$lib/assets/images/light/sun.svg';
 	import moon from '$lib/assets/images/dark/moon.svg';

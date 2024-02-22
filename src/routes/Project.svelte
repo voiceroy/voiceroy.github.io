@@ -7,7 +7,9 @@
 
 <div class="project">
 	<article>
-		<a class="project-name" href={project_link}>{project_name}</a>
+		<a class="project-name" href={project_link} target="_blank" rel="noopener noreferrer"
+			>{project_name}</a
+		>
 		<p class="project-description">{project_description}</p>
 		<img src={project_icon} alt={project_name} />
 	</article>

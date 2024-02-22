@@ -7,7 +7,7 @@
 
 <div class="contact">
 	<p>
-		<a href={contact_url}>
+		<a href={contact_url} target="_blank" rel="noopener noreferrer">
 			<img src={contact_icon_dark} alt={contact_name} class="darktheme" />
 			<img src={contact_icon_light} alt={contact_name} class="lighttheme" />
 		</a>
