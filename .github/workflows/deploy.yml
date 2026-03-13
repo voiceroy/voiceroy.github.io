@@ -4,41 +4,51 @@ on:
   push:
     branches: ['main']
 
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
-  build_site:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v1
-      - name: Install Dependencies
-        run: bun install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
 
-      - name: build
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-        run: |
-          bun run build
+        run: npm run build
 
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: 'build/'
+          path: build/
 
   deploy:
-    needs: build_site
+    needs: build
     runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
