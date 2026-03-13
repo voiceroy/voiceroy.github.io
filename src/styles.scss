@@ -10,3 +10,24 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+a {
+	text-decoration: none;
+}
+
+.darktheme,
+.lighttheme {
+	display: none;
+}
+
+[data-theme='dark'] {
+	.darktheme {
+		display: inline;
+	}
+}
+
+[data-theme='light'] {
+	.lighttheme {
+		display: inline;
+	}
+}

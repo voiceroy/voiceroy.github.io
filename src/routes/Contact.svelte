@@ -1,8 +1,12 @@
 <script lang="ts">
-	export let contact_name: string;
-	export let contact_url: string;
-	export let contact_icon_dark: string;
-	export let contact_icon_light: string;
+	interface Props {
+		contact_name: string;
+		contact_url: string;
+		contact_icon_dark: string;
+		contact_icon_light: string;
+	}
+
+	let { contact_name, contact_url, contact_icon_dark, contact_icon_light }: Props = $props();
 </script>
 
 <div class="contact">
@@ -19,18 +23,5 @@
 		max-width: 3rem;
 		max-height: 3rem;
 		margin: 0.25rem;
-	}
-
-	.contact .darktheme,
-	.contact .lighttheme {
-		display: none;
-	}
-
-	[data-theme='dark'] .contact .darktheme {
-		display: inline;
-	}
-
-	[data-theme='light'] .contact .lighttheme {
-		display: inline;
 	}
 </style>

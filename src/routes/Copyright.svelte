@@ -1,5 +1,9 @@
 <script lang="ts">
-	export let copyright_holder: string;
+	interface Props {
+		copyright_holder: string;
+	}
+
+	let { copyright_holder }: Props = $props();
 </script>
 
 <p>

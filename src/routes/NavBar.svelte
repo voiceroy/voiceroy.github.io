@@ -6,8 +6,12 @@
 		link: string;
 	};
 
-	export let brand_name: string;
-	export let nav_links: NavItem[];
+	interface Props {
+		brand_name: string;
+		nav_links: NavItem[];
+	}
+
+	let { brand_name, nav_links }: Props = $props();
 </script>
 
 <nav>
@@ -28,10 +32,7 @@
 		margin-bottom: 5px;
 	}
 
-	span {
-		font-family: 'Raleway';
-	}
-
+	span,
 	li {
 		font-family: 'Raleway';
 	}

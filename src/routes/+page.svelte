@@ -29,7 +29,8 @@
 	</section>
 	<Header />
 </header>
-<main>
+
+<main class="container">
 	<Projects />
 </main>
 

@@ -41,6 +41,7 @@
 	onMount(() => {
 		applyTheme();
 		window.matchMedia(DARK_PREFERENCE).addEventListener('change', applyTheme);
+		return () => window.matchMedia(DARK_PREFERENCE).removeEventListener('change', applyTheme);
 	});
 </script>
 

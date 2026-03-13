@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build_site:
@@ -10,21 +10,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - uses: oven-sh/setup-bun@v1
       - name: Install Dependencies
         run: bun install
 
       - name: build
         env:
-          BASE_PATH: "/${{ github.event.repository.name }}"
+          BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           bun run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "build/"
+          path: 'build/'
 
   deploy:
     needs: build_site
