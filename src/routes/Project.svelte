@@ -1,10 +1,12 @@
 <script lang="ts">
+	import type { Picture } from '@sveltejs/enhanced-img';
+
 	interface Props {
 		project_name: string;
 		project_description: string;
 		project_link: string;
-		project_icon_dark: string;
-		project_icon_light: string;
+		project_icon_dark: Picture;
+		project_icon_light: Picture;
 	}
 
 	let {

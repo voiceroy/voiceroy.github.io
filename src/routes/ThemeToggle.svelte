@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import sun from '$lib/assets/images/light/sun.svg';
-	import moon from '$lib/assets/images/dark/moon.svg';
+import sun from '$lib/assets/images/light/sun.svg?enhanced';
+import moon from '$lib/assets/images/dark/moon.svg?enhanced';
 
 	let currentTheme: string;
 	const STORAGE_KEY = 'theme';
@@ -55,14 +55,14 @@
 	/>
 </div>
 
-<img
+<enhanced:img
 	alt="themeIndicator"
 	src={currentTheme !== THEMES.DARK ? sun : moon}
 	class={currentTheme !== THEMES.DARK ? 'lighttheme' : 'darktheme'}
 />
 
 <style>
-	img {
+	enhanced\:img {
 		max-width: 16px;
 		max-height: 16px;
 		margin: 5px;
