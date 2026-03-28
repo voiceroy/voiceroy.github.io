@@ -12,7 +12,7 @@
 		link: string;
 	};
 
-	let brand_name: string = 'Harishankar G';
+	let brand_name: string = 'voiceroy';
 	let nav_links: NavItem[] = [
 		{ name: 'About Me', link: '#aboutme' },
 		{ name: 'Contact', link: '#contactme' }
